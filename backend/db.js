@@ -4,9 +4,9 @@ mongoose.connect('mongodb+srv://Het:Qxbu9SYJocBPqr3l@cluster0.ivlpmjg.mongodb.ne
 const UserSchema=new mongoose.Schema({
     firstName:String,
     lastName:String,
-    username:String,
+    email:String,
     password:String,
 })
 
-const User=new mongoose.Model('UserSchema',UserSchema);
+const User=new mongoose.model('UserSchema',UserSchema);
 module.exports = User;
