@@ -33,5 +33,17 @@ userRouter.post("/signup", async function (req, res) {
     console.log(err);
   }
 });
-
+userRouter.put("/", midddleware,async function (req, res) {
+  try{
+    const data=req.body;
+    const {success} = user.safeParse(data);
+    if(!success){
+      res.status(404).send('Invalid User Credentials')
+    }
+    await User.updateOne({_id:req.userId,},data)
+    res.status(200).send('Data Updated successfully')
+  }catch (err){
+    console.log(err)
+  }
+});
 module.exports = userRouter;

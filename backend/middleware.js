@@ -6,6 +6,7 @@ function autmiddlware(req, res, next) {
   const token = headers.split(" ")[1];
   const a = jwt.verify(token, jwt_secret);
   if (a.userId) {
+    req.userId = a.userId; 
     next();
   }
   else{
