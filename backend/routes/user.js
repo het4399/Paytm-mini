@@ -54,7 +54,7 @@ userRouter.get("/bulk", async function (req, res) {
   if (userData.length) {
     res.status(200).json(userData);
   } else {
-    res.status(404).json({ message: "Not Found" });
+    res.status(200).json([]);
   }
 });
 module.exports = userRouter;

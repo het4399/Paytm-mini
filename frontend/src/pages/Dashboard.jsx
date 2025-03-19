@@ -1,7 +1,12 @@
+import { Appbar } from "../components/Appbar";
+import { Users } from "../components/Users";
+
 function Dashboard() {
   return (
     <>
-      <div className="font-bold p-15">Dashboard</div>
+      <Appbar></Appbar>
+      <Users/>
+      
     </>
   );
 }
