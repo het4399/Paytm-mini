@@ -1,4 +1,11 @@
+import { SendMoney } from "../components/SendMoney";
+
 function Send() {
-  return <>Send</>;
+
+  return (
+    <>
+      <SendMoney />
+    </>
+  );
 }
 export default Send;
